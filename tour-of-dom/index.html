@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of DOM</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>
+            This is a simple DOM manipulation project. Here you will see some lists of items. You can see the heading of each section by clicking the button below.
+        </p>
+    </header>
+    <main id="main-content">
+        <section>
+            <h1>My Awesome DOM</h1>
+        <ul>
+            <li>Programming Hero</li>
+            <li>Module 25</li>
+            <li>Lecture 1</li>
+        </ul>
+        </section>
+        <section>
+            <h1 id="fruit-title">Fruits i like most</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+            </ul>
+        </section>
+        <section id="places-container" class="large-text">
+            <h1 id="places-title">Places i want to visit</h1>
+            <ul id="places-list">
+                <li class="important-places">Paris</li>
+                <li class="important-places">London</li>
+                <li class="important-places">New York</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script>
+        var list =document.getElementsByTagName('li')
+        console.log(list);
+
+        const allHeadings = document.getElementsByTagName('h1')
+        for(const heading of allHeadings){
+            console.log(heading.innerText);
+        }
+
+        const fruitTitle = document.getElementById('fruit-title');
+        fruitTitle.innerText = 'Fruits i hate most';
+        
+        const someLi = documents.querySelectorAll('li');
+        for(const li of someLi){
+            console.log(li.innerText);
+        }
+    </script>
+</body>
+</html>
